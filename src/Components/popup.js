@@ -1,15 +1,15 @@
 import React ,{useState} from 'react'
 import './popup.css'
 
-function Popup({name, des,price}) {
+function Popup({name, des,price,close}) {
 
-    const [close,setClose] = useState(false);
+    
   return (
     <div className={close ? 'closed' : 'pop-container'}>
         <div className='popup'>
             <div className='head'>
 
-                <div className='close' onClick={()=>setClose(true)}>
+                <div className='close' onClick={close}>
                    Close
                     </div>
 
